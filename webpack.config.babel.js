@@ -2,7 +2,7 @@ import webpack from 'webpack'
 
 export default {
 	context: __dirname + '/src/js',
-	entry: './index.js',
+	entry: ['./index.js'],
 	output: {
 		path: __dirname + '/dist',
 		filename: 'index.js'
@@ -21,7 +21,7 @@ export default {
 		modulesDirectories: ['node_modules'],
 		extensions: ['', '.js']
 	},
-	devtool: 'inline-source-map',
+	// devtool: 'inline-source-map',
 	plugins: [
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.AggressiveMergingPlugin()
